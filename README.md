@@ -23,9 +23,10 @@ O arquivo CSV original está disponível em [`data/synthetic_coffee_health_10000
 ├── data/
 │   └── synthetic_coffee_health_10000(in).csv       # Dataset original utilizado na análise
 ├── dataset_processado_final.csv                    # Dataset após pré-processamento (usado no modelo)
-├── modelo_sleep_quality_rf.pkl                     # Modelo Random Forest treinado (salvo com joblib)
 └── README.md
 ```
+
+> **Nota sobre o modelo treinado:** o arquivo `modelo_sleep_quality_rf.pkl` (Random Forest treinado, salvo via `joblib`) não foi incluído neste repositório por exceder o limite de tamanho de arquivo do GitHub. O código completo de treinamento e serialização do modelo está disponível no notebook (seção "Modelo Preditivo"), sendo totalmente reproduzível ao executar as células em sequência.
 
 ## Como rodar o projeto
 
@@ -94,7 +95,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn joblib
 **Resultado final:**
 - Modelo escolhido: **Random Forest balanceado** (`class_weight='balanced'`), com acurácia de ~86,5%.
 - Dataset final processado salvo em `dataset_processado_final.csv`.
-- Modelo salvo em `modelo_sleep_quality_rf.pkl` (via `joblib`).
+- Modelo treinado e serializado via `joblib` no notebook (arquivo `.pkl` não incluído no repositório — ver nota acima).
 
 **Seção Recomendações para o Negócio** incluída no notebook, traduzindo a importância das variáveis do modelo (com destaque para o nível de estresse) em ações práticas para a Health&Life Analytics.
 
