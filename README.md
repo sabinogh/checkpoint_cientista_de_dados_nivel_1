@@ -14,16 +14,16 @@ O projeto está dividido em três entregas:
 
 O dataset utilizado é sintético, contendo **10.000 registros** e **16 colunas**, com informações demográficas (idade, gênero, país, ocupação), hábitos (consumo de café e cafeína, atividade física, tabagismo, álcool) e indicadores de saúde (IMC, frequência cardíaca, nível de estresse, qualidade do sono).
 
-O arquivo CSV original está disponível na pasta [`/data`](./data) deste repositório.
+O arquivo CSV original está disponível em [`data/synthetic_coffee_health_10000(in).csv`](./data/synthetic_coffee_health_10000(in).csv) deste repositório.
 
 ## Estrutura do repositório
 
 ```
 ├── Checkpoint Cientista de Dados - Nível 1.ipynb   # Notebook principal com todas as etapas
 ├── data/
-│   └── dataset_original.csv                        # Dataset original utilizado na análise
+│   └── synthetic_coffee_health_10000(in).csv       # Dataset original utilizado na análise
 ├── dataset_processado_final.csv                    # Dataset após pré-processamento (usado no modelo)
-├── modelo_sleep_quality_rf.pkl                      # Modelo Random Forest treinado (salvo com joblib)
+├── modelo_sleep_quality_rf.pkl                     # Modelo Random Forest treinado (salvo com joblib)
 └── README.md
 ```
 
@@ -32,9 +32,9 @@ O arquivo CSV original está disponível na pasta [`/data`](./data) deste reposi
 Este notebook foi desenvolvido e testado no **Google Colab**, com o dataset carregado a partir do Google Drive. Para rodar:
 
 1. Abra o notebook `Checkpoint Cientista de Dados - Nível 1.ipynb` no [Google Colab](https://colab.research.google.com/).
-2. Faça upload do arquivo `dataset_original.csv` (disponível em `/data`) para o seu Google Drive, ajustando o caminho na célula de leitura do dataset:
+2. Faça upload do arquivo `data/synthetic_coffee_health_10000(in).csv` para o seu Google Drive, ajustando o caminho na célula de leitura do dataset:
    ```python
-   dados = pd.read_csv('/content/drive/MyDrive/<seu-caminho>/dataset_original.csv')
+   dados = pd.read_csv('/content/drive/MyDrive/<seu-caminho>/synthetic_coffee_health_10000(in).csv')
    ```
 3. Conecte o Google Drive quando solicitado (`from google.colab import drive`).
 4. Execute as células em sequência: **Ambiente de execução → Executar tudo** (ou `Kernel → Restart and Run All`, se estiver usando Jupyter local).
@@ -101,5 +101,4 @@ pip install pandas numpy matplotlib seaborn scikit-learn joblib
 ## Autor
 
 Guilherme Henrique Sabino
-
 Projeto de Ciências de Dados Nível 1 - Alura
